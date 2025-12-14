@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS users (
+    login VARCHAR(50) PRIMARY KEY,
+    password VARCHAR(100) NOT NULL,
+    salt VARCHAR(32) NOT NULL,   -- соль для SHA-256
+    name VARCHAR(100) NOT NULL
+);
+
+-- Таблица сообщений
+CREATE TABLE IF NOT EXISTS messages (
+    id SERIAL PRIMARY KEY,
+    sender VARCHAR(50) NOT NULL REFERENCES users(login) ON DELETE CASCADE ON UPDATE CASCADE,
+    recipient VARCHAR(50) NOT NULL, -- login получателя или 'all'
+    text TEXT NOT NULL,
+    is_private BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Индексы для ускорения поиска
+CREATE INDEX IF NOT EXISTS idx_messages_sender ON messages(sender);
+CREATE INDEX IF NOT EXISTS idx_messages_recipient ON messages(recipient);
