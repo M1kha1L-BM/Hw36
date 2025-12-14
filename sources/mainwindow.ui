@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>554</width>
+    <height>307</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>GOST type B</family>
+    <pointsize>12</pointsize>
+    <italic>true</italic>
+    <bold>false</bold>
+    <underline>false</underline>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>PointingHandCursor</cursorShape>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::TabShape::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>GOST type A</family>
+            <pointsize>14</pointsize>
+            <italic>true</italic>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Message:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="messageLineEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>90</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>GOST type B</family>
+            <pointsize>12</pointsize>
+            <italic>true</italic>
+            <bold>false</bold>
+            <underline>false</underline>
+            <stylestrategy>PreferAntialias</stylestrategy>
+            <kerning>true</kerning>
+           </font>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTextBrowser" name="commonChatBrowser"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="sendMessageButton">
+      <property name="font">
+       <font>
+        <family>GOST type A</family>
+        <pointsize>14</pointsize>
+        <italic>true</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="text">
+       <string>Send to all</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextBrowser" name="privateChatBrowser"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="privateMessageSend">
+        <property name="font">
+         <font>
+          <family>GOST type A</family>
+          <pointsize>14</pointsize>
+          <italic>true</italic>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Send Private</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>554</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMain_mmenu">
+    <property name="title">
+     <string>Main menu</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_another_clent"/>
+    <addaction name="actionClose_all"/>
+   </widget>
+   <widget class="QMenu" name="menuCheck_serv">
+    <property name="title">
+     <string>Option</string>
+    </property>
+    <addaction name="actionList_of_contacts"/>
+    <addaction name="separator"/>
+    <addaction name="actionHistory_of_chat"/>
+   </widget>
+   <addaction name="menuMain_mmenu"/>
+   <addaction name="menuCheck_serv"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_another_clent">
+   <property name="text">
+    <string>Open another clent</string>
+   </property>
+  </action>
+  <action name="actionClose_all">
+   <property name="text">
+    <string>Close all</string>
+   </property>
+  </action>
+  <action name="actionList_of_contacts">
+   <property name="text">
+    <string>List of contacts</string>
+   </property>
+  </action>
+  <action name="actionHistory_of_chat">
+   <property name="text">
+    <string>History of chat</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
